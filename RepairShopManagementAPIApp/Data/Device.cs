@@ -9,7 +9,7 @@ namespace RepairShopManagementAPIApp.Data
         public string? Maker { get; set; }
         public string? Model { get; set; }
         public DeviceType DeviceType { get; set; }
-        public DateOnly? DateOfPurchace { get; set; }
+        public DateOnly? DateOfPurchase { get; set; }
 
         public virtual ICollection<ServiceEntry> DeviceEntries { get; } = new HashSet<ServiceEntry>();
         public int CustomerID { get; set; }

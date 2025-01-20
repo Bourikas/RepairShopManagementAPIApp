@@ -15,13 +15,15 @@
         public double? Deposit { get; set; }
         public DateTime? DateOfReturn { get; set; }
         public string? Notes { get; set; }
-        public int CreatorUserId { get; set; } //get the user that created the entry
-        public int? FixUserId { get; set; } //user that fixed the device
-        public int? ReturningUserId { get; set; } //user that returned the device to the customer
+
+        //TODO:
+        //public int CreatorUserId { get; set; } //get the user that created the entry
+        //public int? FixUserId { get; set; } //user that fixed the device
+        //public int? ReturningUserId { get; set; } //user that returned the device to the customer
 
         public bool IsReturned { get; set; } = false;
         public virtual Device? Device { get; set; }
-        public virtual User? User { get; set; }
+        //public virtual User? User { get; set; }
 
     }
 }
