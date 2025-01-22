@@ -11,7 +11,7 @@ namespace RepairShopManagementAPIApp.Data
         public DeviceType DeviceType { get; set; }
         public DateOnly? DateOfPurchase { get; set; }
 
-        public virtual ICollection<ServiceEntry> DeviceEntries { get; } = new HashSet<ServiceEntry>();
+        public virtual ICollection<ServiceEntry> ServiceEntries { get; } = new HashSet<ServiceEntry>();
         public int CustomerID { get; set; }
         public virtual Customer? Customer { get; set; }
 
