@@ -21,6 +21,7 @@
         //public int? FixUserId { get; set; } //user that fixed the device
         //public int? ReturningUserId { get; set; } //user that returned the device to the customer
 
+        public bool IsFinished { get; set; } = false;
         public bool IsReturned { get; set; } = false;
         public virtual Device? Device { get; set; }
         //public virtual User? User { get; set; }
