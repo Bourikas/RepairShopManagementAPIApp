@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using RepairShopManagementAPIApp.Data;
+using Serilog;
 
 namespace RepairShopManagementAPIApp
 {
@@ -18,6 +19,12 @@ namespace RepairShopManagementAPIApp
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            // Load Serilog Configuration from appsettings.json
+            builder.Host.UseSerilog((context, config) =>
+            {
+                config.ReadFrom.Configuration(context.Configuration);
+            });
 
             var app = builder.Build();
 
