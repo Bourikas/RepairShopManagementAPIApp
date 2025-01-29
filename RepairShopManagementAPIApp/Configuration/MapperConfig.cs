@@ -9,7 +9,7 @@ namespace RepairShopManagementAPIApp.Configuration
         public MapperConfig() 
         {
             CreateMap<User, UserPatchDTO>().ReverseMap();
-            CreateMap<User, UserLoginDTO>().ReverseMap();
+            CreateMap<User, UserSignupDTO>().ReverseMap();
             CreateMap<User, UserDTO>().ReverseMap();
         }
     }
